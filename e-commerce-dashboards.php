@@ -31,6 +31,7 @@ function dashboards() {
       function drawTable() {
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Product');
+        data.addColumn('string', 'Price');
         data.addRows([
           <?php include 'product_echo.php';?>
         ]);
