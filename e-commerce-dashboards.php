@@ -9,7 +9,7 @@
  * License: GPL2
  */
 
-// Add Menu
+// Add Menź
 function addMenu() {
 	add_menu_page("Dashboards", "Dashboards", 4, "dashboards", "dashboards", "dashicons-screenoptions");
 	add_submenu_page("dashboards", "Settings", "Settings", 4, "settings", "settings");
@@ -20,26 +20,6 @@ add_action("admin_menu", "addMenu");
 function dashboards() {
 	echo "<h1>E-Commerce Dashboards</h1>";
 	echo "<p>Welcome to E-Commerce Dashboards. Your all-in-one dashboard plugin!</p>";
-
-	// Producten ophalen uit database
-	include 'conn_database.php';
-
-	$sql = "SELECT post_title 
-			FROM wp_posts
-			WHERE post_type = 'product'
-			AND post_status = 'publish'
-			ORDER BY post_title";
-	$result = $conn->query($sql);
-
-	if ($result->num_rows > 0) {
-		echo "<h2>Products</h2>";
-	    // output data of each row
-	    while($row = $result->fetch_assoc()) {
-	        echo "<p>" . $row['post_title'] . "</p>";
-	    }
-	} else {
-	    echo "0 results";
-	}
 
  ?>
 
@@ -52,7 +32,7 @@ function dashboards() {
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Product');
         data.addRows([
-          ['<?php include 'conn_database.php';
+          <?php include 'conn_database.php';
 
 	$sql = "SELECT post_title 
 			FROM wp_posts
@@ -64,43 +44,22 @@ function dashboards() {
 	if ($result->num_rows > 0) {
 	    // output data of each row
 	    while($row = $result->fetch_assoc()) {
-	        echo $row['post_title'];
+	        echo "['" . $row['post_title'] . "'],";
 	    }
 	} else {
 	    echo "0 results";
-	} ?>']
+	} ?>
         ]);
 
         var table = new google.visualization.Table(document.getElementById('table_div'));
 
-        table.draw(data, {showRowNumber: true, width: '99%', height: '100%'});
+        table.draw(data, {showRowNumber: true, width: '30%', height: '30%'});
       }
     </script>
 
     <?php
     $conn->close();
 	echo "<div id='table_div'></div>";
-
-	// Producten ophalen uit database
-	include 'conn_database.php';
-
-	$sql = "SELECT post_title 
-			FROM wp_posts
-			WHERE post_type = 'product'
-			AND post_status = 'publish'
-			ORDER BY post_title";
-	$result = $conn->query($sql);
-
-	if ($result->num_rows > 0) {
-		echo "<h2>Products</h2>";
-	    // output data of each row
-	    while($row = $result->fetch_assoc()) {
-	        echo "<p>" . $row['post_title'] . "</p>";
-	    }
-	} else {
-	    echo "0 results";
-	}
-	$conn->close();
 }
 
 // Page Settings
