@@ -42,9 +42,10 @@ function dashboards() {
       }
     </script>
 
-    <?php
+<?php
+
     $conn->close();
-	echo "<div id='table_div'></div>";
+    echo "<div id='table_div'></div>";
 	
 }
 
@@ -86,6 +87,7 @@ function insideweb_theme_info() { ?>
     </script>
 
     <?php
+    
     $conn->close();
-	echo "<div id='table_div'></div>";
+	  echo "<div id='table_div'></div>";
 }
