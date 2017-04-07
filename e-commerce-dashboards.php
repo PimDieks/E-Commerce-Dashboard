@@ -25,6 +25,7 @@ function dashboards() {
 
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
+    
       google.charts.load('current', {'packages':['table']});
       google.charts.setOnLoadCallback(drawTable);
 
@@ -38,7 +39,7 @@ function dashboards() {
 
         var table = new google.visualization.Table(document.getElementById('table_div'));
 
-        table.draw(data, {showRowNumber: true, width: '30%', height: '30%'});
+        table.draw(data, {showRowNumber: false, width: '30%', height: '30%'});
       }
     </script>
 
