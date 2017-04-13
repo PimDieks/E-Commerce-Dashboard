@@ -39,6 +39,7 @@ function dashboards() {
         ]);
 
         var table = new google.visualization.Table(document.getElementById('table_div'));
+
         table.draw(data, {showRowNumber: false, width: '30%', height: '30%'});
         table.draw(data, {showRowNumber: true, width: '50%', height: '100%'});
       }
