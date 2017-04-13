@@ -21,6 +21,7 @@ function dashboards() {
 	echo "<h1>E-Commerce Dashboards</h1>";
 	echo "<p>Welcome to E-Commerce Dashboards. Your all-in-one dashboard plugin!</p>";
 
+
  ?>
 
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -32,14 +33,18 @@ function dashboards() {
       function drawTable() {
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Product');
-        data.addColumn('string', 'Price');
+        data.addColumn('number', 'Price');
         data.addRows([
           <?php include 'product_echo.php';?>
         ]);
 
         var table = new google.visualization.Table(document.getElementById('table_div'));
 
+<<<<<<< Updated upstream
         table.draw(data, {showRowNumber: false, width: '30%', height: '30%'});
+=======
+        table.draw(data, {showRowNumber: true, width: '50%', height: '100%'});
+>>>>>>> Stashed changes
       }
     </script>
 
@@ -49,6 +54,8 @@ function dashboards() {
     echo "<div id='table_div'></div>";
 	
 }
+
+
 
 // Page Settings
 function settings() {
