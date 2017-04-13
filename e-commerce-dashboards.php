@@ -9,7 +9,7 @@
  * License: GPL2
  */
 
-// Add Menź
+// Add Menu
 function addMenu() {
 	add_menu_page("Dashboards", "Dashboards", 4, "dashboards", "dashboards", "dashicons-screenoptions");
 	add_submenu_page("dashboards", "Settings", "Settings", 4, "settings", "settings");
@@ -39,12 +39,8 @@ function dashboards() {
         ]);
 
         var table = new google.visualization.Table(document.getElementById('table_div'));
-
-<<<<<<< Updated upstream
         table.draw(data, {showRowNumber: false, width: '30%', height: '30%'});
-=======
         table.draw(data, {showRowNumber: true, width: '50%', height: '100%'});
->>>>>>> Stashed changes
       }
     </script>
 
