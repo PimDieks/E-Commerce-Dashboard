@@ -12,11 +12,15 @@
     // Add Menu
     function addMenu() {
       add_menu_page("Dashboards", "E-Commerce", 4, "dashboards", "dashboards", "dashicons-screenoptions", 2);
+      add_submenu_page("dashboards", "All", "All", 4, "all", "all");
       add_submenu_page("dashboards", "Products", "Products", 4, "products", "products");
       add_submenu_page("dashboards", "Location", "Location", 4, "location", "location");
       add_submenu_page("dashboards", "Shipping", "Shipping", 4, "shipping", "shipping");
     }
     add_action("admin_menu", "addMenu");
+
+    //Page All
+    include 'all.php';
 
     // Page Dashboards
     include 'dashboards.php';
