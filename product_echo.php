@@ -1,4 +1,5 @@
 <?php
+
 	include 'conn_database.php';
 
 	$sql = "SELECT post_title, meta_value
@@ -18,4 +19,5 @@
 	} else {
 	    echo "0 results";
 	}
+
 ?>
