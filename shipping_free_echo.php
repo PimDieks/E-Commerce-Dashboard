@@ -6,7 +6,7 @@
 			WHERE order_item_type = 'Shipping'
 			AND order_item_name = 'Gratis bezorging'";
 	$result = $conn->query($sql);
-	echo "[" . $row['Aantal'] . ",],";
+	echo "[" . $row['Aantal'] . "],";
 
 	// if ($result->num_rows > 0) {
 	//     // Output data of each row
