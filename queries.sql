@@ -1,13 +1,13 @@
 -- Shipping Method
 
 	-- Gratis bezorging
-	SELECT COUNT(*)
+	SELECT COUNT(*) as Aantal
 	FROM wp_woocommerce_order_items
 	WHERE order_item_type = 'Shipping'
 	AND order_item_name = 'Gratis bezorging';
 
 	-- Bezorgen
-	SELECT COUNT(*)
+	SELECT COUNT(*) as Aantal
 	FROM wp_woocommerce_order_items
 	WHERE order_item_type = 'Shipping'
 	AND order_item_name = 'Bezorgen';
