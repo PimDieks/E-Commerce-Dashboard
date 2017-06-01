@@ -17,10 +17,6 @@
 	<div id="layoutContainer"></div>
 </div>
 
-<style>
-	
-</style>
-
 <script type="text/javascript">
 	var config = {
     content: [{
@@ -62,6 +58,7 @@
 
 	addMenuItem( 'Add me!', 'You\'ve added me!' );
 	addMenuItem( 'Me too!', 'You\'ve added me too!' );
+</script>
 
 <?php
 
