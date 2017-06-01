@@ -29,6 +29,7 @@ Highcharts.chart('container', {
     },
     plotOptions: {
         pie: {
+            colors: ['#80A5DD','#C85A62',],
             allowPointSelect: true,
             cursor: 'pointer',
             dataLabels: {
@@ -41,7 +42,7 @@ Highcharts.chart('container', {
         }
     },
     series: [{
-        name: 'Brands',
+        name: 'Percentage',
         colorByPoint: true,
         data: [{
             name: 'Paid shipping',

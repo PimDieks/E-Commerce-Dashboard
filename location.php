@@ -8,69 +8,50 @@
 <script src="../wp-content/plugins/E-Commerce-Dashboard/highcharts/code/highcharts.js"></script>
 <script src="../wp-content/plugins/E-Commerce-Dashboard/highcharts/code/modules/exporting.js"></script>
 
-<div id="container" style="min-width: 310px; max-width: 100%; height: 100%; margin-right:2%;"></div>
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
-
-
-        <script type="text/javascript">
+    <script type="text/javascript">
 
 Highcharts.chart('container', {
     chart: {
-        type: 'bar'
+        type: 'column'
     },
     title: {
-        text: '<p>Overview of customer location</p>'
+        text: 'Overview of customer location'
     },
     subtitle: {
         text: ''
     },
-    colors: ['#80A5DD',],
     xAxis: {
         categories: [<?php include 'location_echo.php';?>],
-        title: {
-            text: null
-        }
+        crosshair: true
     },
     yAxis: {
         min: 0,
         title: {
-            text: 'Number of customers',
-            align: 'high'
-        },
-        labels: {
-            overflow: 'justify'
+            text: 'Number of customers'
         }
     },
     tooltip: {
-        valueSuffix: ''
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} Number of customers</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
     },
     plotOptions: {
-        bar: {
-            dataLabels: {
-                enabled: true
-            }
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
         }
-    },
-    legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'top',
-        x: -40,
-        y: 80,
-        floating: true,
-        borderWidth: 1,
-        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-        shadow: true
-    },
-    credits: {
-        enabled: false
     },
     series: [{
         name: 'Number of customers',
         data: [<?php include 'location_count_echo.php';?>]
     }]
 });
-        </script>
+    </script>
 
 <?php
 }
