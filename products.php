@@ -12,16 +12,15 @@
     google.charts.setOnLoadCallback(drawTable);
 
     function drawTable() {
-    var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Product');
-      data.addColumn('number', 'Price');
-      data.addRows([
-        <?php include 'product_echo.php';?>
-      ]);
+      var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Product');
+        data.addColumn('number', 'Price');
+        data.addRows([
+          <?php include 'product_echo.php';?>
+        ]);
 
     var table = new google.visualization.Table(document.getElementById('table_div'));
-      table.draw(data, {showRowNumber: false, width: '30%', height: '30%'});
-      table.draw(data, {showRowNumber: true, width: '50%', height: '100%'});
+      table.draw(data, {showRowNumber: false, width: '50%', height: '100%'});
     }
     </script>
 
