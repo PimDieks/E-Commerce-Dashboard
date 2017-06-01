@@ -6,13 +6,14 @@
 			WHERE order_item_type = 'Shipping'
 			AND order_item_name = 'Gratis bezorging'";
 	$result = $conn->query($sql);
+	echo $result;
 
-	if ($result->num_rows > 0) {
-	    // Output data of each row
-	    while($row = $result->fetch_assoc()) {
-	        echo "[" . $row['Aantal'] . ",],";
-	    }
-	} else {
-	    echo "0 results";
-	}
+	// if ($result->num_rows > 0) {
+	//     // Output data of each row
+	//     while($row = $result->fetch_assoc()) {
+	//         echo "[" . $row['Aantal'] . ",],";
+	//     }
+	// } else {
+	//     echo "0 results";
+	// }
 ?>
