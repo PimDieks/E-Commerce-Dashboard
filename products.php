@@ -1,7 +1,7 @@
 <?php
   function products() {
     echo "<h1>Products</h1>";
-    echo "<p>Overview of current products and prices</p>";
+    echo "<p>";
 
 ?>
 
@@ -19,7 +19,7 @@ Highcharts.chart('container', {
         type: 'bar'
     },
     title: {
-        text: 'Overview of customer location'
+        text: 'Overview of products and prices'
     },
     subtitle: {
         text: ''
@@ -34,7 +34,7 @@ Highcharts.chart('container', {
     yAxis: {
         min: 0,
         title: {
-            text: 'Number of customers',
+            text: 'Price',
             align: 'high'
         },
         labels: {
@@ -66,7 +66,7 @@ Highcharts.chart('container', {
         enabled: false
     },
     series: [{
-        name: 'Number of customers',
+        name: 'Products',
         data: [<?php include 'product_count_echo.php';?>]
     }]
 });
