@@ -1,4 +1,5 @@
 <?php
+<<<<<<< Updated upstream
 	function dashboards() {
 		echo "<h1>E-Commerce Dashboards</h1>";
 		echo "<p>Control your business with management dashboards</p>";
@@ -64,3 +65,60 @@
 
 </script>
 <?php } ?>
+=======
+  function dashboards() {
+    echo "<h1>Location</h1>";
+    echo "";
+
+?>
+
+<script src="../wp-content/plugins/E-Commerce-Dashboard/highcharts/code/highcharts.js"></script>
+<script src="../wp-content/plugins/E-Commerce-Dashboard/highcharts/code/modules/exporting.js"></script>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="//golden-layout.com/assets/js/goldenlayout.min.js"></script>
+<link type="text/css" rel="stylesheet" href="//golden-layout.com/assets/css/goldenlayout-base.css" />
+<link type="text/css" rel="stylesheet" href="//golden-layout.com/assets/css/goldenlayout-light-theme.css" />
+
+<script type="text/javascript">
+    
+    var config = {
+    content: [{
+        type: 'row',
+      content:[{
+        type: 'stack',
+        width: 60,
+        content:[{
+              type: 'component',
+              componentName: 'testComponent',
+              title:'Component 1'
+          },{
+              type: 'component',
+              componentName: 'testComponent',
+              title:'Component 2'
+          }]
+      },{
+            type: 'column',
+            content:[{
+                type: 'component',
+                componentName: 'testComponent'
+            },{
+                type: 'component',
+                componentName: 'testComponent'
+            }]
+        }]
+    }]
+};
+
+var myLayout = new GoldenLayout( config );
+
+myLayout.registerComponent( 'testComponent', function(){});
+
+myLayout.init();
+    
+</script>
+
+<?php
+}
+?>
+>>>>>>> Stashed changes
