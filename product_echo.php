@@ -7,7 +7,7 @@
 			AND post_status = 'publish'
 			AND post_type = 'product'
 			AND meta_key = '_price'
-			ORDER BY post_title";
+			ORDER BY meta_value DESC";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
