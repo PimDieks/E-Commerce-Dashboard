@@ -1,6 +1,6 @@
 <?php
   function shipping() {
-    echo "<h1>Location</h1>";
+    echo "<h1>Shipping</h1>";
     echo "";
 
 ?>
@@ -45,10 +45,10 @@ Highcharts.chart('container', {
         colorByPoint: true,
         data: [{
             name: 'Paid shipping',
-            y: [<?php include 'shipping_paid_echo.php';?>]
+            y: <?php include 'shipping_paid_echo.php';?>
         }, {
             name: 'Free shipping',
-            y: [<?php include 'shipping_free_echo.php';?>],
+            y: <?php include 'shipping_free_echo.php';?>,
         }]
     }]
 });
