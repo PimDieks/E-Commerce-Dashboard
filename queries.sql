@@ -1,3 +1,21 @@
+-- Products
+
+	SELECT post_title, meta_value
+	FROM wp_postmeta, wp_posts
+	WHERE wp_posts.ID = wp_postmeta.post_id
+	AND post_status = 'publish'
+	AND post_type = 'product'
+	AND meta_key = '_price'
+	ORDER BY post_title;
+
+	SELECT post_title, meta_value
+	FROM wp_postmeta, wp_posts
+	WHERE wp_posts.ID = wp_postmeta.post_id
+	AND post_status = 'publish'
+	AND post_type = 'product'
+	AND meta_key = '_price'
+	ORDER BY post_title;
+
 -- Shipping Method
 
 	-- Gratis bezorging
