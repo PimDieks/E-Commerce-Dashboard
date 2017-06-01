@@ -6,7 +6,7 @@
 			WHERE order_item_type = 'Shipping'
 			AND order_item_name = 'Bezorgen'";
 	$result = $conn->query($sql);
-	echo $result;
+	echo "[" . $row['Aantal'] . ",],";
 
 	// if ($result->num_rows > 0) {
 	//     // Output data of each row
