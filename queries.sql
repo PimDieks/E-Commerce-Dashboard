@@ -14,6 +14,11 @@
 
 -- Location
 
-	SELECT meta_value
+	SELECT DISTINCT meta_value
 	FROM wp_postmeta
 	WHERE meta_key = "_billing_city";
+
+	SELECT meta_value, COUNT(*) as Aantal
+	FROM wp_postmeta
+	WHERE meta_key = "_billing_city"
+	GROUP BY meta_value;
