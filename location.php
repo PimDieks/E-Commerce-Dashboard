@@ -14,19 +14,38 @@
             type: 'column'
         },
         title: {
-            text: 'Overview of customer location'
+            text: 'Overview of customer location',
+            style: {
+                color: '#000'
+            }
         },
         subtitle: {
             text: ''
         },
         xAxis: {
             categories: [<?php include 'location_echo.php';?>],
-            crosshair: true
+            crosshair: true,
+            labels: {
+                style: {
+                    fontSize: '13',
+                    color: '#000'
+                }
+            }
         },
         yAxis: {
             min: 0,
             title: {
-                text: 'Number of customers'
+                text: 'Number of customers',
+                style: {
+                    fontSize: '13',
+                    color: '#000'
+                }
+            },
+            labels: {
+                style: {
+                    fontSize: '13',
+                    color: '#000'
+                }
             }
         },
         tooltip: {

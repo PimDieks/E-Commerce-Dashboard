@@ -14,7 +14,10 @@
             type: 'bar'
         },
         title: {
-            text: 'Overview of products with prices and stock'
+            text: 'Overview of products with prices and stock',
+            style: {
+                color: '#000'
+            }
         },
         subtitle: {
             text: ''
@@ -24,16 +27,27 @@
             categories: [<?php include 'product_echo.php';?>],
             title: {
                 text: null
+            },
+            labels: {
+                style: {
+                    fontSize: '13',
+                    color: '000'
+                }
             }
         },
         yAxis: {
+            distance: 0,
             min: 0,
             title: {
                 text: '',
                 align: 'high'
             },
             labels: {
-                overflow: 'justify'
+                overflow: 'justify',
+                style: {
+                    fontSize: '13',
+                    color: '#000'
+                }
             }
         },
         tooltip: {
@@ -62,12 +76,13 @@
         },
         series: [{
             name: 'Products',
-            data: [<?php include 'product_count_echo.php';?>]
+            data: [<?php include 'product_count_echo.php';?>],
+            pointWidth: 20
         },{
             name: 'Stock',
             data: [<?php include 'product_stock_echo.php';?>],
             color: '#C85A62',
-            lineWidth: 10
+            pointWidth: 20
         }]
     });
 </script>
