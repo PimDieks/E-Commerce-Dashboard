@@ -7,8 +7,10 @@
 <style type="text/css">
     
 .chart {
-    height: 400px;
-    width: 98%;
+    height: 500px;
+    width: 47%;
+    margin: 1.5%;
+    float: left;
 }
 
 .spacer {
@@ -18,7 +20,7 @@
 
 <?php include 'products.php';?>
 
-<div class="spacer"></div>
+<!-- <div class="spacer"></div> -->
 
 <?php include 'location.php';?>
 
