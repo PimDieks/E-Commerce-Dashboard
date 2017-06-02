@@ -1,7 +1,7 @@
 <?php
 	// Add dashboard widget location
 	function oi_dashboard_location() {
-		wp_add_dashboard_widget('wp_dashboard_widget', 'Location', 'oi_location');
+		wp_add_dashboard_widget('wp_dashboard_location', 'Location', 'oi_location');
 	}
 	add_action('wp_dashboard_setup', 'oi_dashboard_location' );
 
