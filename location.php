@@ -2,7 +2,7 @@
 
 <script type="text/javascript">
 
-    Highcharts.chart('container', {
+    Highcharts.chart('location', {
         chart: {
             type: 'column'
         },

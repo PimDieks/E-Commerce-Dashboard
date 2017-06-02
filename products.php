@@ -6,44 +6,29 @@
 <script type="text/javascript">
 
         Highcharts.chart('products', {
-                chart: {
+            chart: {
                 type: 'bar'
             },
             title: {
-                text: 'Overview of products with prices and stock',
-                style: {
-                    color: '#000'
-                }
+                text: 'Overview of products and prices'
             },
             subtitle: {
                 text: ''
             },
-            colors: ['#80A5DD',],
             xAxis: {
                 categories: [<?php include 'product_echo.php';?>],
                 title: {
                     text: null
-                },
-                labels: {
-                    style: {
-                        fontSize: '13',
-                        color: '000'
-                    }
                 }
             },
             yAxis: {
-                distance: 0,
                 min: 0,
                 title: {
-                    text: '',
+                    text: 'Price',
                     align: 'high'
                 },
                 labels: {
-                    overflow: 'justify',
-                    style: {
-                        fontSize: '13',
-                        color: '#000'
-                    }
+                    overflow: 'justify'
                 }
             },
             tooltip: {
@@ -73,12 +58,11 @@
             series: [{
                 name: 'Products',
                 data: [<?php include 'product_count_echo.php';?>],
-                pointWidth: 10
+                colors: ['#80A5DD',]
             },{
                 name: 'Stock',
                 data: [<?php include 'product_stock_echo.php';?>],
-                color: '#C85A62',
-                pointWidth: 10
-            }]
+                colors: ['#80A5DD',]
+            },]
         });
     </script>
