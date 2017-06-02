@@ -6,7 +6,7 @@
 <script src="../wp-content/plugins/E-Commerce-Dashboard/highcharts/code/highcharts.js"></script>
 <script src="../wp-content/plugins/E-Commerce-Dashboard/highcharts/code/modules/exporting.js"></script>
 
-<div id="container" style="min-width: 310px; max-width: 100%; height: 100%; margin-right:2%;"></div>
+<div id="container" style="min-width: 310px; max-width: 100%; height: 700px; margin-right:2%;"></div>
 
 <script type="text/javascript">
     Highcharts.chart('container', {
@@ -77,12 +77,12 @@
         series: [{
             name: 'Products',
             data: [<?php include 'product_count_echo.php';?>],
-            pointWidth: 20
+            pointWidth: 10
         },{
             name: 'Stock',
             data: [<?php include 'product_stock_echo.php';?>],
             color: '#C85A62',
-            pointWidth: 20
+            pointWidth: 10
         }]
     });
 </script>
