@@ -29,7 +29,7 @@
         yAxis: {
             min: 0,
             title: {
-                text: 'Price',
+                text: '',
                 align: 'high'
             },
             labels: {
@@ -65,7 +65,9 @@
             data: [<?php include 'product_count_echo.php';?>]
         },{
             name: 'Stock',
-            data: [<?php include 'product_stock_echo.php';?>]
+            data: [<?php include 'product_stock_echo.php';?>],
+            color: '#C85A62',
+            lineWidth: 10
         }]
     });
 </script>

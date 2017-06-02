@@ -6,7 +6,8 @@
 			WHERE wp_posts.ID = wp_postmeta.post_id
 			AND post_status = 'publish'
 			AND post_type = 'product'
-			AND meta_key = '_stock'";
+			AND meta_key = '_stock'
+			ORDER BY post_title ASC";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
