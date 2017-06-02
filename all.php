@@ -2,13 +2,29 @@
   function all() {
     echo "<h1>All</h1>";
 
-    // Page Products
-    include 'products.php';
+?>
 
-    // Page Location
-    include 'location.php';
+<style type="text/css">
+    
+.chart {
+    height: 400px;
+    width: 98%;
+}
 
-    // Page Shipping
-    include 'shipping.php';
+.spacer {
+    height: 20px;
+}
+</style>
+
+<?php include 'products.php';?>
+
+<div class="spacer"></div>
+
+<?php include 'location.php';?>
+
+<div class="spacer"></div>
+
+<?php include 'shipping.php';
+
 }
 ?>

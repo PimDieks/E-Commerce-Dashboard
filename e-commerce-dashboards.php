@@ -24,15 +24,3 @@
     
     // Page All
     include 'all.php';
-
-    // Page Dashboards
-    include 'dashboards.php';
-
-    // Page Products
-    include 'products.php';
-
-    // Page Location
-    include 'location.php';
-
-    // Page Shipping
-    include 'shipping.php';
