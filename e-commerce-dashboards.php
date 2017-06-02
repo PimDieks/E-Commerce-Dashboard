@@ -19,7 +19,10 @@
     }
     add_action("admin_menu", "addMenu");
 
-    //Page All
+    // WP Dashboards Chart
+    include 'wp-dashboard.php';
+    
+    // Page All
     include 'all.php';
 
     // Page Dashboards
