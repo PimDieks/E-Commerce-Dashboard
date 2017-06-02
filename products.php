@@ -12,11 +12,12 @@
             title: {
                 text: 'Overview of products and prices'
             },
+            colors: ['#C85A62','#545E8F','#687DBD','#80A5DD','#AFBDE7',],
             subtitle: {
                 text: ''
             },
             xAxis: {
-                categories: [<?php include 'product_echo.php';?>],
+                categories: [<?php include 'sql/product_echo.php';?>],
                 title: {
                     text: null
                 }
@@ -39,6 +40,10 @@
                     dataLabels: {
                         enabled: true
                     }
+                },
+                series: {
+                    pointPadding: 0, // Defaults to 0.1
+                    groupPadding: 0.01 // Defaults to 0.2
                 }
             },
             legend: {
@@ -57,12 +62,10 @@
             },
             series: [{
                 name: 'Products',
-                data: [<?php include 'product_count_echo.php';?>],
-                colors: ['#80A5DD',]
+                data: [<?php include 'sql/product_count_echo.php';?>],
             },{
                 name: 'Stock',
-                data: [<?php include 'product_stock_echo.php';?>],
-                colors: ['#80A5DD',]
-            },]
+                data: [<?php include 'sql/product_stock_echo.php';?>],
+            }]
         });
     </script>

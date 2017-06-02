@@ -12,11 +12,12 @@
                 color: '#000'
             }
         },
+        colors: ['#C85A62','#545E8F','#687DBD','#80A5DD','#AFBDE7',],
         subtitle: {
             text: ''
         },
         xAxis: {
-            categories: [<?php include 'location_echo.php';?>],
+            categories: [<?php include 'sql/location_echo.php';?>],
             crosshair: true,
             labels: {
                 style: {
@@ -57,7 +58,7 @@
         },
         series: [{
             name: 'Number of customers',
-            data: [<?php include 'location_count_echo.php';?>]
+            data: [<?php include 'sql/location_count_echo.php';?>]
         }]
     });
 </script>

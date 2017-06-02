@@ -12,12 +12,13 @@
             title: {
                 text: 'Shipping method'
             },
+            colors: ['#80A5DD','#C85A62',],
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
             },
             plotOptions: {
                 pie: {
-                    colors: ['#80A5DD','#C85A62',],
+                    colors: ['#C85A62','#545E8F','#687DBD','#80A5DD','#AFBDE7',],
                     allowPointSelect: true,
                     cursor: 'pointer',
                     dataLabels: {
@@ -34,10 +35,10 @@
                 colorByPoint: true,
                 data: [{
                     name: 'Paid shipping',
-                    y: <?php include 'shipping_paid_echo.php';?>
+                    y: <?php include 'sql/shipping_paid_echo.php';?>
                 }, {
                     name: 'Free shipping',
-                    y: <?php include 'shipping_free_echo.php';?>,
+                    y: <?php include 'sql/shipping_free_echo.php';?>,
                 }]
             }]
         });
