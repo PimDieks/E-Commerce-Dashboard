@@ -14,7 +14,7 @@
             type: 'bar'
         },
         title: {
-            text: 'Overview of products and prices'
+            text: 'Overview of products with prices and stock'
         },
         subtitle: {
             text: ''
@@ -63,6 +63,9 @@
         series: [{
             name: 'Products',
             data: [<?php include 'product_count_echo.php';?>]
+        },{
+            name: 'Stock',
+            data: [<?php include 'product_stock_echo.php';?>]
         }]
     });
 </script>

@@ -1,7 +1,7 @@
 <?php
 	// Add dashboard widget
 	function oi_dashboard_products() {
-		wp_add_dashboard_widget('wp_dashboard_widget', 'Products', 'oi_products');
+		wp_add_dashboard_widget('wp_dashboard_products', 'Products', 'oi_products');
 	}
 	add_action('wp_dashboard_setup', 'oi_dashboard_products' );
 

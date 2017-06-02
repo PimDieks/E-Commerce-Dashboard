@@ -1,20 +1,20 @@
 -- Products
 
-	SELECT post_title, meta_value
+	SELECT post_title, CAST(meta_value as DECIMAL(9,2)) _meta_value
 	FROM wp_postmeta, wp_posts
 	WHERE wp_posts.ID = wp_postmeta.post_id
 	AND post_status = 'publish'
 	AND post_type = 'product'
 	AND meta_key = '_price'
-	ORDER BY post_title;
+	ORDER BY _meta_value DESC;
 
-	SELECT post_title, meta_value
+	SELECT post_title, CAST(meta_value as DECIMAL(9,2)) _meta_value
 	FROM wp_postmeta, wp_posts
 	WHERE wp_posts.ID = wp_postmeta.post_id
 	AND post_status = 'publish'
 	AND post_type = 'product'
 	AND meta_key = '_price'
-	ORDER BY post_title;
+	ORDER BY _meta_value DESC;
 
 -- Shipping Method
 
@@ -41,3 +41,12 @@
 	WHERE meta_key = '_billing_city'
 	GROUP BY meta_value
 	ORDER BY Aantal DESC;
+
+-- Stock
+
+	SELECT post_title, meta_value
+	FROM wp_postmeta, wp_posts
+	WHERE wp_posts.ID = wp_postmeta.post_id
+	AND post_status = 'publish'
+	AND post_type = 'product'
+	AND meta_key = '_stock';
