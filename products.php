@@ -10,7 +10,7 @@
                 type: 'bar'
             },
             title: {
-                text: 'Overview of products and prices'
+                text: 'Overview of stock and the product price'
             },
             colors: ['#C85A62','#545E8F','#687DBD','#80A5DD','#AFBDE7',],
             subtitle: {
