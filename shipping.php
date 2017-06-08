@@ -10,7 +10,7 @@
                 type: 'pie'
             },
             title: {
-                text: 'Shipping method'
+                text: 'Overview of the shipping method'
             },
             colors: ['#80A5DD','#C85A62',],
             tooltip: {
