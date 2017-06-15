@@ -26,7 +26,11 @@
 
 <div class="spacer"></div>
 
-<?php include 'shipping.php';
+<?php include 'shipping.php';?>
+
+<div class="spacer"></div>
+
+<?php include 'payment.php';
 
 }
 ?>

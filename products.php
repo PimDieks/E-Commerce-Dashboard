@@ -25,7 +25,7 @@
             yAxis: {
                 min: 0,
                 title: {
-                    text: 'Price',
+                    text: 'Price in euro',
                     align: 'high'
                 },
                 labels: {
@@ -61,10 +61,10 @@
                 enabled: false
             },
             series: [{
-                name: 'Products',
+                name: 'Product prices',
                 data: [<?php include 'sql/product_count_echo.php';?>],
             },{
-                name: 'Stock',
+                name: 'Amount of stock',
                 data: [<?php include 'sql/product_stock_echo.php';?>],
             }]
         });
