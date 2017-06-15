@@ -53,7 +53,7 @@
                 x: -40,
                 y: 80,
                 floating: true,
-                borderWidth: 1,
+                borderWidth: 0,
                 backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
                 shadow: true
             },
