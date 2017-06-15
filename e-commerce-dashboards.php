@@ -48,15 +48,21 @@
 
   <?php include 'products.php';?>
 
-  <?php include 'location.php';?>
+  <div class="spacer"></div>
+
+  <?php include 'sales.php';?>
+
+  <?php include 'stock.php';?>
 
   <div class="spacer"></div>
 
   <?php include 'shipping.php';?>
 
+  <?php include 'payment.php';?>
+
   <div class="spacer"></div>
 
-  <?php include 'payment.php';
+  <?php include 'location.php';
 
   }
 ?>

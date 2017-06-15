@@ -1,23 +1,23 @@
-<div id="location" class="chart"></div>
+<div id="sales" class="chart"></div>
 
 <script type="text/javascript">
 
-    Highcharts.chart('location', {
+    Highcharts.chart('sales', {
         chart: {
             type: 'column'
         },
         title: {
-            text: 'Customer Location',
+            text: 'Top 5 Product Sales',
             style: {
                 color: '#000'
             }
         },
-        colors: ['#C85A62','#545E8F','#687DBD','#80A5DD','#AFBDE7',],
+        colors: ['#545E8F',],
         subtitle: {
             text: ''
         },
         xAxis: {
-            categories: [<?php include 'sql/location_echo.php';?>],
+            categories: [<?php include 'sql/sales_echo.php';?>],
             crosshair: true,
             labels: {
                 style: {
@@ -45,7 +45,7 @@
         tooltip: {
             headerFormat: '<span style="font-size:13px">{point.key}</span><table>',
             pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
+                '<td style="padding:0"><b>{point.y:.1f}</td></tr>',
             footerFormat: '</table>',
             shared: true,
             useHTML: true
@@ -57,8 +57,8 @@
             }
         },
         series: [{
-            name: 'Number of Customers',
-            data: [<?php include 'sql/location_count_echo.php';?>]
+            name: 'Number of Sales',
+            data: [<?php include 'sql/sales_count_echo.php';?>]
         }]
     });
 </script>

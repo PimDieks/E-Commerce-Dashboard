@@ -10,7 +10,7 @@
                 type: 'bar'
             },
             title: {
-                text: 'Overview of stock and the product price'
+                text: 'Product Price and Stock'
             },
             colors: ['#C85A62','#545E8F','#687DBD','#80A5DD','#AFBDE7',],
             subtitle: {
@@ -25,7 +25,7 @@
             yAxis: {
                 min: 0,
                 title: {
-                    text: 'Price in euro',
+                    text: 'Price in Euros',
                     align: 'high'
                 },
                 labels: {
@@ -61,10 +61,10 @@
                 enabled: false
             },
             series: [{
-                name: 'Product prices',
+                name: 'Product Price',
                 data: [<?php include 'sql/product_count_echo.php';?>],
             },{
-                name: 'Amount of stock',
+                name: 'Product Stock',
                 data: [<?php include 'sql/product_stock_echo.php';?>],
             }]
         });
