@@ -9,7 +9,7 @@
             plotShadow: false
         },
         title: {
-            text: 'Browser<br>shares<br>2015',
+            text: 'Payment<br>Method',
             align: 'center',
             verticalAlign: 'middle',
             y: 40
@@ -34,11 +34,12 @@
         },
         series: [{
             type: 'pie',
-            name: 'Browser share',
+            name: 'Payment Method',
             innerSize: '50%',
+            colors: ['#C85A62','#545E8F',],
             data: [
                 ['Cash', <?php include 'sql/payment_cash_echo.php';?>],
-                ['Ideal', <?php include 'sql/payment_ideal_echo.php';?>],
+                ['iDEAL', <?php include 'sql/payment_ideal_echo.php';?>],
                 {
                     name: 'Proprietary or Undetectable',
                     y: 0.2,

@@ -1,7 +1,7 @@
 <script src="../wp-content/plugins/E-Commerce-Dashboard/highcharts/code/highcharts.js"></script>
 <script src="../wp-content/plugins/E-Commerce-Dashboard/highcharts/code/modules/exporting.js"></script>
 
-<div id="products" class="chart"></div>
+<div id="products" class="chart-product"></div>
 
 <script type="text/javascript">
 

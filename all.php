@@ -6,21 +6,27 @@
 
 <style type="text/css">
     
-.chart {
-    height: 500px;
-    width: 47%;
-    margin: 1.5%;
-    float: left;
-}
+	.chart {
+	    height: 500px;
+	    width: 47%;
+	    margin: 1.5%;
+	    float: left;
+	}
 
-.spacer {
-    height: 20px;
-}
+	.chart-product {
+		height: 500px;
+	    width: 96%;
+	    margin: 1.5%;
+	    float: left;
+	}
+
+	.spacer {
+	    height: 20px;
+	}
+
 </style>
 
 <?php include 'products.php';?>
-
-<!-- <div class="spacer"></div> -->
 
 <?php include 'location.php';?>
 
