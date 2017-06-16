@@ -1,3 +1,3 @@
 <?php
-	include 'dashboard-products.php';
+	include 'dashboard-sales.php';
 ?>
